@@ -1,3 +1,4 @@
+//Component to display calculated points
 import React from "react";
 
 const CustomerPoints = ({ customerPoints }) => {

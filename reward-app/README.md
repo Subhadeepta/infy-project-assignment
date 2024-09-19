@@ -1,8 +1,18 @@
-# React + Vite
+# Customer Reward Points App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+This app calculates and displays reward points for customers based on their transaction history.
 
-Currently, two official plugins are available:
+## Installation
+1. Clone the repository.
+2. Run `npm install` to install dependencies.
+3. Run `npm start` to launch the application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Components
+- `transactionData.js`: Dataset for customers for calculating points from transactoion
+- `CustomerPoints`: Displays total points per month for each customer.
+- `rewardCalulator.js` : Functions to calculate point by months.
+
+
+## Testing
+Run `npm test` to execute unit tests.
