@@ -1,21 +1,23 @@
 //Component to display calculated points
-import React from "react";
+import React, { useMemo } from "react";
 
 const CustomerPoints = ({ customerPoints }) => {
-  return (
-    <div className="app-container">
-      {Object.keys(customerPoints).map((customerId) => (
-        <div key={customerId}>
-          <h2>Customer {customerId}</h2>
-          {Object.keys(customerPoints[customerId]).map((month) => (
-            <p key={month}>
-              Month {month}: {customerPoints[customerId][month]} points
-            </p>
-          ))}
-        </div>
-      ))}
-    </div>
-  );
+  // Memoizing the rendered customer points
+  const memoizedCustomerPoints = useMemo(() => {
+    return Object.keys(customerPoints).map((customerId) => (
+      <div key={customerId}>
+        <h2>Customer {customerId}</h2>
+        {Object.keys(customerPoints[customerId]).map((month) => (
+          <p key={month}>
+            Month {month}: {customerPoints[customerId][month]} points
+          </p>
+        ))}
+      </div>
+    ));
+  }, [customerPoints]);
+
+  return <div className="app-container">{memoizedCustomerPoints}</div>;
 };
 
 export default CustomerPoints;
+
