@@ -12,7 +12,7 @@ This app calculates and displays reward points for customers based on their tran
 - `transactionData.js`: Dataset for customers for calculating points from transactoion
 - `CustomerPoints`: Displays total points per month for each customer.
 - `rewardCalulator.js` : Functions to calculate point by months.
-- - `App.test.js` : Test file for testing Calculation.
+- `App.test.js` : Test file for testing Calculation.
 
 
 ## Testing
