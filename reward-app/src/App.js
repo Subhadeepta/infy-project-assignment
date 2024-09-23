@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { fetchTransactions } from "./api/transactionData";
 import { calculateMonthlyPoints } from "./utils/rewardCalculator";
 import CustomerPoints from "./components/CustomerPoints";
+import TransactionsTable from "./components/TransactionTable";
 
 const App = () => {
   const [transactions, setTransactions] = useState([]);
@@ -33,7 +34,12 @@ const App = () => {
     return <p>Loading...</p>;
   }
 
-  return <CustomerPoints customerPoints={customerPoints} />;
+  return (
+    <div className="main-page">
+      <TransactionsTable transactions={transactions} />
+      <CustomerPoints customerPoints={customerPoints} />;
+    </div>
+  );
 };
 
 export default App;

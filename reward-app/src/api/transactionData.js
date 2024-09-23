@@ -7,10 +7,9 @@ const transactions = [
   { customerId: 1, date: "05-12-2024", amount: 120 },
   { customerId: 1, date: "06-12-2024", amount: 60 },
   { customerId: 2, date: "02-09-2024", amount: 120 },
-  { customerId: 2, date: "02-09-2024", amount: 53 },
-  { customerId: 2, date: "02-15-2024", amount: 30 },
-  { customerId: 2, date: "03-15-2024", amount: 65 },
-  { customerId: 3, date: "02-07-2024", amount: 105 },
+  { customerId: 2, date: "03-09-2024", amount: 53 },
+  { customerId: 2, date: "04-15-2024", amount: 30 },
+  { customerId: 2, date: "05-15-2024", amount: 65 },
 ];
 
 export const fetchTransactions = () => {

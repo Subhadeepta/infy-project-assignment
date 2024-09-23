@@ -68,7 +68,13 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-.app-container{
- border: 2px solid white;
- padding: 10px;
+.app-container {
+  border: 2px solid white;
+  padding: 10px;
+}
+.main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
