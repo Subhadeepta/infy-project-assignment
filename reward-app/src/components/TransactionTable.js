@@ -7,7 +7,7 @@ const TransactionsTable = ({ transactions }) => {
       <caption>Customer Transactions</caption>
       <thead>
         <tr>
-          <th className="app-container">Customer</th>
+          <th className="app-container">Customer Name</th>
           <th className="app-container">Date</th>
           <th className="app-container">Amount</th>
         </tr>
@@ -15,7 +15,7 @@ const TransactionsTable = ({ transactions }) => {
       <tbody>
         {transactions.map((transaction) => (
           <tr key={transaction.id}>
-            <td className="app-container">{transaction.customerId}</td>
+            <td className="app-container">{transaction.fullName}</td>
             <td className="app-container">{transaction.date}</td>
             <td className="app-container">${transaction.amount.toFixed(2)}</td>
           </tr>

@@ -15,19 +15,21 @@ export const calculatePoints = (amount) => {
 export const calculateMonthlyPoints = (transactions) => {
   const customerPoints = {};
 
-  transactions.forEach(({ customerId, date, amount }) => {
+  transactions.forEach(({ customerId, date, amount, fullName }) => {
     const month = new Date(date).getMonth() + 1;
     const points = calculatePoints(amount);
-
     if (!customerPoints[customerId]) {
-      customerPoints[customerId] = {};
+      customerPoints[customerId] = {
+        name: fullName,
+        pointsByMonth: {}
+      };
     }
 
-    if (!customerPoints[customerId][month]) {
-      customerPoints[customerId][month] = 0;
+    if (!customerPoints[customerId].pointsByMonth[month]) {
+      customerPoints[customerId].pointsByMonth[month] = 0;
     }
 
-    customerPoints[customerId][month] += points;
+    customerPoints[customerId].pointsByMonth[month] += points;
   });
 
   return customerPoints;

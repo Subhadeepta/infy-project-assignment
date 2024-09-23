@@ -29,7 +29,6 @@ const App = () => {
   const customerPoints = useMemo(() => {
     return calculateMonthlyPoints(transactions);
   }, [transactions]);
-
   if (loading) {
     return <p>Loading...</p>;
   }
